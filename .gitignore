@@ -1,0 +1,10 @@
+# Ignore temporary build and compiled binaries
+/build/
+/tmp/
+
+# Ignore downloaded dependency source trees 
+/CLBlast/
+/opencl_headers/CL/
+
+# Ignore the compiled OpenCL stub library
+/opencl_headers/lib/libOpenCL.so
