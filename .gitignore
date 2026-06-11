@@ -1,5 +1,6 @@
 # Ignore temporary build and compiled binaries
 /build/
+/build_stub/
 /tmp/
 
 # Ignore downloaded dependency source trees 

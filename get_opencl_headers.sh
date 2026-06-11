@@ -3,7 +3,8 @@ set -e # Exit immediately if any command fails
 
 # --- Tested on v2026.05.29 ---
 # Change this tag if you need a newer OpenCL specifications
-OPENCL_RELEASE_TAG=v2026.05.29
+OPENCL_RELEASE_TAG=${OPENCLRTAG:-"v2026.05.29"} #last realeased
+
 
 # --- Download OpenCL C Headers ---
 if [ ! -d "./opencl_headers/CL" ]; then
