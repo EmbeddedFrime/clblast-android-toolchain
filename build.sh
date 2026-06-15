@@ -19,9 +19,9 @@ NDK_ROOT=$ANDROID_HOME/ndk/$NDK_VERSION    #standard android home root
 CMAKE_TOOLCHAIN=${CMAKE_TOOLCHAIN:-$NDK_ROOT/build/cmake/android.toolchain.cmake}
 
 # --- working openCL Headers released ---
-OPENCL_RELEASE_TAG=${OPENCLRTAG:-"v2026.05.29"} #last realeased
+OPENCL_RELEASE_TAG=${OPENCL_TAG:-"v2026.05.29"} #last realeased
 # --- working CLBLAST released ---
-CLBLAST_VERSION=${VCLBLAST:-"1.7.0"} #last realeased
+CLBLAST_VERSION=${VCLBLAST_TAG:-"1.7.0"} #last realeased
 
 
 echo "Downloading all the dependency..."
@@ -64,7 +64,7 @@ cmake ../CLBlast \
  -DBUILD_SHARED_LIBS=OFF \
  -DOPENCL_INCLUDE_DIRS=../opencl_headers/ \
  -DOPENCL_LIBRARIES=../build_stub/libOpenCL.so \
- -DCMAKE_CXX_FLAGS="-Wno-error=format-security"     # This flag solve a bug in the latest CLBlast Release
+ -DCMAKE_CXX_FLAGS="-Wno-error=format-security"     # This flag solve a bug in the CLBlast 1.7.0 Release
 
 make -j$(nproc)
 

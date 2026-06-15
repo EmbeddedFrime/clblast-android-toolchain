@@ -59,13 +59,13 @@ NDK_VERSION=25.1.8937393 ./build.sh
 #### Variable 4 - Change OpenCL Headers Version
 ```bash
 # e.g. Use older OpenCL headers from v2025.07.22
-OPENCLRTAG=v2025.07.22 ./build.sh
+OPENCL_TAG=v2025.07.22 ./build.sh
 ```
 
 #### Variable 5 - Change CLBlast Version
 ```bash
 # e.g. Use older CLBLAST version 1.6.3
-VCLBLAST=1.6.3 ./build.sh
+VCLBLAST_TAG=1.6.3 ./build.sh
 ```
 
 #### Variable 6 - Custom CMake Toolchain Path
@@ -80,7 +80,7 @@ You can chain multiple variables together to completely customize the environmen
 For example, to build a 32-bit ARM version targeting Android API 22 using an older NDK version, older OpenCL headers, and a custom CLBlast tag:
 
 ```bash
-ABI=armeabi-v7a PLATFORM=android-22 NDK_VERSION=25.1.8937393 OPENCLRTAG=v2025.07.22 VCLBLAST=1.6.3 ./build.sh
+ABI=armeabi-v7a PLATFORM=android-22 NDK_VERSION=25.1.8937393 OPENCL_TAG=v2025.07.22 VCLBLAST_TAG=1.6.3 ./build.sh
 ```
 
 #### Cleaning Up the Workspace
