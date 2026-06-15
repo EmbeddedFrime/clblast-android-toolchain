@@ -68,7 +68,7 @@ OPENCL_TAG=v2025.07.22 ./build.sh
 VCLBLAST_TAG=1.6.3 ./build.sh
 ```
 
-#### Variable 6 - only compile the OpenCL stub library
+#### Variable 6 - Only compile the OpenCL stub library
 ```bash
 # Only compile the OpenCL stub library 
 OPENCL_STUB_ONLY=1 ./build.sh
