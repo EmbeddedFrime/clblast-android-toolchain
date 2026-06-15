@@ -38,6 +38,7 @@ fi
 # dev branch :
 # git clone git@github.com:CNugteren/CLBlast.git    # fix the  error : DCMAKE_CXX_FLAGS="-Wno-error=format-security"
 
+
 echo "Compilation ..."
 # --- Compile Stub ---
 mkdir -p ./build_stub
@@ -50,6 +51,10 @@ cmake ../opencl_headers/lib \
 make -j$(nproc)
 cd ..
 
+if [[ -n "${OPENCL_STUB_ONLY}" ]]; then
+    echo "Successful! You can find your file at /build_stub/libOpenCL.so ."
+    exit 0 #stop de script here
+fi
 
 # --- Compile CLBlast ---
 mkdir -p ./build

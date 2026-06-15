@@ -68,7 +68,13 @@ OPENCL_TAG=v2025.07.22 ./build.sh
 VCLBLAST_TAG=1.6.3 ./build.sh
 ```
 
-#### Variable 6 - Custom CMake Toolchain Path
+#### Variable 6 - only compile the OpenCL stub library
+```bash
+# Only compile the OpenCL stub library 
+OPENCL_STUB_ONLY=1 ./build.sh
+```
+
+#### Variable 7 - Custom CMake Toolchain Path
 ```bash
 # e.g. Override the default NDK toolchain with a completely custom toolchain file
 CMAKE_TOOLCHAIN=/opt/custom-toolchains/android.toolchain.cmake ./build.sh
