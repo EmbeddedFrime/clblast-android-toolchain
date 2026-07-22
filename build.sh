@@ -47,7 +47,9 @@ rm -rf ./*
 cmake ../opencl_headers/lib \
     -DCMAKE_TOOLCHAIN_FILE=$CMAKE_TOOLCHAIN \
     -DANDROID_ABI=$ABI \
-    -DANDROID_PLATFORM=$PLATFORM
+    -DANDROID_PLATFORM=$PLATFORM \
+    -DCMAKE_BUILD_TYPE=Release
+    
 make -j$(nproc)
 cd ..
 
@@ -69,6 +71,7 @@ cmake ../CLBlast \
  -DBUILD_SHARED_LIBS=OFF \
  -DOPENCL_INCLUDE_DIRS=../opencl_headers/ \
  -DOPENCL_LIBRARIES=../build_stub/libOpenCL.so \
+ -DCMAKE_BUILD_TYPE=Release \
  -DCMAKE_CXX_FLAGS="-Wno-error=format-security"     # This flag solve a bug in the CLBlast 1.7.0 Release
 
 make -j$(nproc)
